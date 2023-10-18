@@ -6,6 +6,8 @@
 int main() {
     float n1;
     printf("Enter a number: ");
+    fflush(stdout);
+    fflush(stdin);
     scanf("%f", &n1);
     if (n1)
         printf("%.2f is positive", n1);
