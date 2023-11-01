@@ -2,9 +2,12 @@
 CMakeLists.txt
 cmake-build-debug/
 Test Zone
-Unit 3 Embedded C/Lesson 1/.settings
-Unit 3 Embedded C/Lesson 1/Debug
-Unit 3 Embedded C/Lesson 1/Startup
+
+Debug/
+Startup/
 Unit 3 Embedded C/Lesson 1/.cproject
-Unit 3 Embedded C/Lesson 1/.project
-Unit 3 Embedded C/Lesson 1/STM32F103C8TX_FLASH.ld
+.cproject
+.project
+STM32F103C8TX_FLASH.ld
+.settings/
+led_blink Debug.launch
