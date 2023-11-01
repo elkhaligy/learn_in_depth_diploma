@@ -2,7 +2,6 @@
 CMakeLists.txt
 cmake-build-debug/
 Test Zone
-
 Debug/
 Startup/
 Unit 3 Embedded C/Lesson 1/.cproject
