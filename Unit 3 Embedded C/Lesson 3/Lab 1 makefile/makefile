@@ -5,32 +5,49 @@
 # $(wildcard *(file_extension)) is used to gather all the files with specific extension in a variable
 # $((VAR):(file_extension_1)=(file_extension_2)) is used to convert something like uart.c to uart.o
 
-CPU		= arm926ej-s
+#Constants
 CC		= arm-none-eabi-
-CFLAGS	= -g -mcpu=$(CPU)
 INCS	= -I inc
+SRC 	= $(wildcard $(SRC_DIR)/*.c)
+OBJ 	= $(addprefix $(OBJ_DIR)/,$(notdir $(SRC:.c=.o)))
+# --- --- ---
+
+
+CPU		= arm926ej-s
+CFLAGS	= -g -mcpu=$(CPU)
 LIBS	=
-SRC 	= $(wildcard src/*.c)
-OBJ 	= $(SRC:.c=.o)
+SRC_DIR = src
+OBJ_DIR = release
+REL_DIR = release
 AS_SRC	= $(wildcard *.s)
-AS_OBJ	= $(AS_SRC:.s=.o)
+AS_OBJ	= $(addprefix $(REL_DIR)/,$(AS_SRC:.s=.o))
 PROJECT = hello_world
 
-
-$(PROJECT).bin: $(PROJECT).elf
+$(info var is $(AS_SRC) $(AS_OBJ))
+$(REL_DIR)/$(PROJECT).bin: $(REL_DIR)/$(PROJECT).elf
 	$(CC)objcopy.exe -O binary $< $@
+	@echo $@ done
 
-$(PROJECT).elf: $(OBJ) $(AS_OBJ)
-	$(CC)ld.exe -T linker_script.ld $(LIBS) $(OBJ) $(AS_OBJ) -o $@
+$(REL_DIR)/$(PROJECT).elf: $(OBJ) $(AS_OBJ)
+	$(CC)ld.exe -T linker_script.ld $(LIBS) $(OBJ) release/startup.o -o $@
+	@echo $@ done
 
-%.o: %.s
-	$(CC)as.exe $(CFLAGS) $< -o $@
+release/startup.o: $(AS_SRC)
+	arm-none-eabi-as.exe $(CFLAGS) $< -o $@
+	@echo $@ done
 
-%.o: %.c
+$(REL_DIR)/%.o: $(SRC_DIR)/%.c
 	$(CC)gcc.exe $(CFLAGS) -c $(INCS) $< -o $@
+	@echo $@ done
 
 clean_all:
-	rm *.o *.elf *.bin
+	rm release/*.o release/*.elf release/*.bin
 
 clean:
-	rm *.elf *.bin
+	rm release/*.elf release/*.bin
+
+
+
+
+
+

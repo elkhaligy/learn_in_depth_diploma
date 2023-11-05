@@ -9,7 +9,7 @@ SECTIONS
 	. = 0x10000;
 	.startup . :
 	{
-		startup.o (.text)
+		release/startup.o (.text)
 	}> big_mem
 	.text :
 	{
