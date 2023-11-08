@@ -1,0 +1,13 @@
+20000400 B _E_Bss
+20000000 D _E_Data
+0000013c T _E_Text
+20000000 B _S_Bss
+20000000 D _S_Data
+000000a0 T Default_Handler
+000000a0 W H_Fault_Handler
+00000010 T main
+000000a0 W MM_Fault_Handler
+000000a0 W NMI_Handler
+000000ac T Reset_Handler
+20000000 b Stack_Top
+00000000 T Vectors_Arr
