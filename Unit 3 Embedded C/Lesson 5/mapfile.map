@@ -1,0 +1,111 @@
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+FLASH            0x00000000         0x20000000         xr
+SRAM             0x20000000         0x20000000         xrw
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+
+.text           0x00000000      0x148
+ *(.vectors*)
+ .vectors       0x00000000       0x10 release/startup.o
+                0x00000000                Vectors_Arr
+ *(.text*)
+ .text          0x00000010       0x9c release/main.o
+                0x00000010                main
+ .text          0x000000ac       0x9c release/startup.o
+                0x000000ac                H_Fault_Handler
+                0x000000ac                MM_Fault_Handler
+                0x000000ac                Default_Handler
+                0x000000ac                NMI_Handler
+                0x000000b8                Reset_Handler
+ *(.rodata)
+                0x00000148                _E_Text = .
+                0x00000148                . = ALIGN (0x4)
+
+.glue_7         0x00000148        0x0
+ .glue_7        0x00000148        0x0 linker stubs
+
+.glue_7t        0x00000148        0x0
+ .glue_7t       0x00000148        0x0 linker stubs
+
+.vfp11_veneer   0x00000148        0x0
+ .vfp11_veneer  0x00000148        0x0 linker stubs
+
+.v4_bx          0x00000148        0x0
+ .v4_bx         0x00000148        0x0 linker stubs
+
+.iplt           0x00000148        0x0
+ .iplt          0x00000148        0x0 release/main.o
+
+.rel.dyn        0x00000148        0x0
+ .rel.iplt      0x00000148        0x0 release/main.o
+
+.data           0x20000000        0x0 load address 0x00000148
+                0x20000000                _S_Data = .
+ *(.data)
+ .data          0x20000000        0x0 release/main.o
+ .data          0x20000000        0x0 release/startup.o
+                0x20000000                _E_Data = .
+                0x20000000                . = ALIGN (0x4)
+
+.igot.plt       0x20000000        0x0 load address 0x00000148
+ .igot.plt      0x20000000        0x0 release/main.o
+
+.bss            0x20000000      0x400 load address 0x00000148
+                0x20000000                _S_Bss = .
+ *(.bss)
+ .bss           0x20000000        0x0 release/main.o
+ .bss           0x20000000      0x400 release/startup.o
+                0x20000400                _E_Bss = .
+LOAD release/main.o
+LOAD release/startup.o
+OUTPUT(release/TIVAC_Cortex_M4.elf elf32-littlearm)
+LOAD linker stubs
+
+.debug_info     0x00000000      0x242
+ .debug_info    0x00000000       0xc0 release/main.o
+ .debug_info    0x000000c0      0x182 release/startup.o
+
+.debug_abbrev   0x00000000      0x15e
+ .debug_abbrev  0x00000000       0x78 release/main.o
+ .debug_abbrev  0x00000078       0xe6 release/startup.o
+
+.debug_loc      0x00000000       0xb4
+ .debug_loc     0x00000000       0x38 release/main.o
+ .debug_loc     0x00000038       0x7c release/startup.o
+
+.debug_aranges  0x00000000       0x40
+ .debug_aranges
+                0x00000000       0x20 release/main.o
+ .debug_aranges
+                0x00000020       0x20 release/startup.o
+
+.debug_line     0x00000000      0x170
+ .debug_line    0x00000000       0xa6 release/main.o
+ .debug_line    0x000000a6       0xca release/startup.o
+
+.debug_str      0x00000000      0x206
+ .debug_str     0x00000000      0x12d release/main.o
+                                0x166 (size before relaxing)
+ .debug_str     0x0000012d       0xd9 release/startup.o
+                                0x15c (size before relaxing)
+
+.comment        0x00000000       0x49
+ .comment       0x00000000       0x49 release/main.o
+                                 0x4a (size before relaxing)
+ .comment       0x00000049       0x4a release/startup.o
+
+.ARM.attributes
+                0x00000000       0x2e
+ .ARM.attributes
+                0x00000000       0x2e release/main.o
+ .ARM.attributes
+                0x0000002e       0x2e release/startup.o
+
+.debug_frame    0x00000000       0x80
+ .debug_frame   0x00000000       0x30 release/main.o
+ .debug_frame   0x00000030       0x50 release/startup.o
