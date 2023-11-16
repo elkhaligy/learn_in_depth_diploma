@@ -52,34 +52,18 @@ FIFO_Status FIFO_Is_Full(FIFO_Buffer *FIFO_Buffer){
 		return FIFO_Full;
 	return FIFO_Good;
 }
-// FIFO_Status FIFO_Print(FIFO_Buffer *FIFO_Buffer){
-// 	ELEMENT_TYPE * Temp = FIFO_Buffer -> Tail;
-// 	if(!FIFO_Buffer -> Head || !FIFO_Buffer -> Base || !FIFO_Buffer -> Tail)
-// 		return FIFO_Null;
-// 	if(FIFO_Buffer -> Count == 0)
-// 		return FIFO_Empty;
-// 	for (int i = 0; i < FIFO_Buffer -> Count; i++){
-// 		printf("%d \n", *Temp);
-// 		if(Temp == (FIFO_Buffer -> Base + FIFO_Buffer -> Length * sizeof(ELEMENT_TYPE))) 
-// 			Temp = FIFO_Buffer -> Base;
-// 		else
-// 			Temp += 1;
-// 	}
-// 	printf("\n");
-// 	return FIFO_Good;
-// }
 FIFO_Status FIFO_Print(FIFO_Buffer *FIFO_Buffer){
-	//ELEMENT_TYPE * Temp = FIFO_Buffer -> Tail;
+	ELEMENT_TYPE * Temp = FIFO_Buffer -> Tail;
 	if(!FIFO_Buffer -> Head || !FIFO_Buffer -> Base || !FIFO_Buffer -> Tail)
 		return FIFO_Null;
 	if(FIFO_Buffer -> Count == 0)
 		return FIFO_Empty;
 	for (int i = 0; i < FIFO_Buffer -> Count; i++){
-		printf("%d \n", *(FIFO_Buffer->Tail));
-		if(FIFO_Buffer == (FIFO_Buffer -> Base + FIFO_Buffer -> Length * sizeof(ELEMENT_TYPE))) 
-			FIFO_Buffer = FIFO_Buffer -> Base;
+		printf("%d \n", *Temp);
+		if(Temp == (FIFO_Buffer -> Base + FIFO_Buffer -> Length * sizeof(ELEMENT_TYPE))) 
+			Temp = FIFO_Buffer -> Base;
 		else
-			FIFO_Buffer += 1;
+			Temp += 1;
 	}
 	printf("\n");
 	return FIFO_Good;
