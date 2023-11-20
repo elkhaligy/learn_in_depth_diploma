@@ -22,7 +22,7 @@ It also contains major exams which can be found in this [sheet](https://docs.goo
 - **Lesson 4**: My own Makefile, GDB server and client, Debugging TM4C123 MCU with openOCD GDB server using eclipse as a GDB client
 - **Lesson 5**: Debuggers types, dynamic allocation and heap, supporting malloc function on embedded platform (for training only)
 
-### Unit 4: System Architect
+### Unit 4: System Architect ✅
 - **Lesson 1 - Data Structure**: Exploring various data structures and implementing queue, stack and linked list in pure C.
 - **Lesson 2 - Embedded Systems Architecting**: State diagrams, modules and system sequence diagram with the help of TTool program.
 
