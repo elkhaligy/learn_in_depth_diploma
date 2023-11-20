@@ -4,6 +4,7 @@
 This repository contains code related to the "Learn in Depth" diploma program. The program covers various topics starting from C, embedded C, bare-metal programming and extending to embedded Linux. The completed lessons and projects codes are organized in this repo.
 ## Exams Degrees
 This diploma has MCQ online quizzes. The degrees I obtained are presented in this [sheet](https://docs.google.com/spreadsheets/d/1-RhVSX8D5e59ArxwQAZ7SBQgnF2vDLaunIXQzS-IwBk/edit?usp=drive_link).
+
 It also contains major exams which can be found in this [sheet](https://docs.google.com/spreadsheets/d/1Dd21kKvUdmXYZ7ZtOY98hBQUxvTusX5RYDb1DWJ3_jg/edit?usp=drive_link)
 ## Completed Topics
 
@@ -28,5 +29,7 @@ It also contains major exams which can be found in this [sheet](https://docs.goo
 ## Repository Structure
 
 The repository is organized to reflect the structure of the Learn in Depth program. Here's an overview of the directory structure:
+
 Unit -> Lesson -> Code
+
 The GitHub repository only contains code for the sake of version control, any material, screenshots and simulations can be found here on my  [Google drive](https://drive.google.com/drive/folders/1k01LU9_HLwt75TEdyJRb8LvAUCDr3fAc?usp=drive_link)
