@@ -1,0 +1,8 @@
+
+obj/detector.o:
+         U ALARM_Set_Alarm
+0000004c T DT_PS_Get_Pressure
+00000018 T DT_State_High
+00000000 T DT_State_Low
+00000000 B DT_State_Pointer
+00000004 B Pressure_Threshold

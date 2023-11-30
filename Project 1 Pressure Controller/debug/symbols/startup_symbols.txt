@@ -1,0 +1,17 @@
+
+obj/startup.o:
+         U _E_Bss
+         U _E_Data
+         U _E_Text
+         U _S_Bss
+         U _S_Data
+         U _Stack_Top
+00000000 W Bus_Fault
+00000000 T Default_Handler
+00000000 W H_Fault_Handler
+         U main
+00000000 W MM_Fault_Handler
+00000000 W NMI_Handler
+0000001c T Reset_Handler
+00000000 W Usage_Fault_Handler
+00000000 D vectors

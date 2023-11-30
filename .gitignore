@@ -2,7 +2,7 @@
 CMakeLists.txt
 cmake-build-debug/
 Test Zone
-Debug/
+
 Startup/
 Unit 3 Embedded C/Lesson 1/.cproject
 .cproject
@@ -13,3 +13,16 @@ led_blink Debug.launch
 .metadata
 Unit 4 System Architect/Lesson 1 Data Structure/DB/rel/Student_Database.exe
 Archive/
+Unit 3 Embedded C/Lesson 1/led_blink/Debug/Src/subdir.mk
+Unit 3 Embedded C/Lesson 1/led_blink/Debug/Src/main.su
+Unit 3 Embedded C/Lesson 1/led_blink/Debug/Src/main.o
+Unit 3 Embedded C/Lesson 1/led_blink/Debug/Src/main.d
+Unit 3 Embedded C/Lesson 1/led_blink/Debug/Src/main.cyclo
+Unit 3 Embedded C/Lesson 1/led_blink/Debug/sources.mk
+Unit 3 Embedded C/Lesson 1/led_blink/Debug/objects.mk
+Unit 3 Embedded C/Lesson 1/led_blink/Debug/objects.list
+Unit 3 Embedded C/Lesson 1/led_blink/Debug/makefile
+Unit 3 Embedded C/Lesson 1/led_blink/Debug/led_blink.map
+Unit 3 Embedded C/Lesson 1/led_blink/Debug/led_blink.list
+Unit 3 Embedded C/Lesson 1/led_blink/Debug/led_blink.hex
+Unit 3 Embedded C/Lesson 1/led_blink/Debug/led_blink.elf

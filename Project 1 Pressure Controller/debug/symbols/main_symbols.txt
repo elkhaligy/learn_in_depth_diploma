@@ -1,0 +1,12 @@
+
+obj/main.o:
+         U ALARM_State_Off
+         U ALARM_State_Pointer
+         U DT_State_Low
+         U DT_State_Pointer
+         U GPIO_INITIALIZATION
+00000000 T main
+         U PS_State_Pointer
+         U PS_State_Read
+         U Set_Alarm_actuator
+0000004c T Setup

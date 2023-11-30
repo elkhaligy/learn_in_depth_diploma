@@ -1,0 +1,8 @@
+
+obj/alarm.o:
+00000060 T ALARM_Set_Alarm
+00000000 T ALARM_State_Off
+00000020 T ALARM_State_On
+00000000 B ALARM_State_Pointer
+         U Delay
+         U Set_Alarm_actuator

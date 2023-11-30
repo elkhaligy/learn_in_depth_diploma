@@ -1,0 +1,7 @@
+
+obj/pressure_sensor.o:
+         U DT_PS_Get_Pressure
+         U getPressureVal
+00000040 T PS_State_Idle
+00000000 B PS_State_Pointer
+00000000 T PS_State_Read

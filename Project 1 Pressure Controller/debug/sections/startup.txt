@@ -1,0 +1,17 @@
+
+obj/startup.o:     file format elf32-littlearm
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00000124  00000000  00000000  00000034  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  1 .data         00000000  00000000  00000000  00000158  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .bss          00000000  00000000  00000000  00000158  2**0
+                  ALLOC
+  3 .vectors      00000018  00000000  00000000  00000158  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, DATA
+  4 .comment      0000004a  00000000  00000000  00000170  2**0
+                  CONTENTS, READONLY
+  5 .ARM.attributes 0000002a  00000000  00000000  000001ba  2**0
+                  CONTENTS, READONLY
