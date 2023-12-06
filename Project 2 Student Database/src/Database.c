@@ -14,7 +14,7 @@
 void Get_Data_File(Queue_T *Database_Queue){
 	FILE *File;
 	char Buffer[500];
-	File = fopen("D:\\Documents\\Personal\\Learn In Depth Diploma\\Code\\Project 2 Student Database\\Data.txt", "r");
+	File = fopen("Data.txt", "r");
     if (File == NULL) {
         printf("[ERROR] Unable to open file\n");
         return;

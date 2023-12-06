@@ -36,10 +36,11 @@ PROJECT = Students_Database
 
 .PHONY: default all map flash erase axf
 # default and all are targets with dependnecies while map is a target without a depencency
-default: 	$(REL_DIR)/$(PROJECT).bin
-all: 		clean_all $(REL_DIR)/$(PROJECT).bin
 windows:
 	gcc.exe -Wall $(SRC) $(INCS) -o $(REL_DIR)/$(PROJECT).exe
+default: 	$(REL_DIR)/$(PROJECT).bin
+all: 		clean_all $(REL_DIR)/$(PROJECT).bin
+
 map: 		
 	$(CC)ld.exe -T $(LINKER) $(LIBS) $(OBJ) -o $@ -Map=mapfile.map
 	@echo Successful Operation!
